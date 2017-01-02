@@ -1,0 +1,99 @@
+#main-container {
+  position: relative;
+}
+
+.information {
+  position: absolute;
+  transform: translateY(40%);
+}
+
+.col-xs-12 {
+  padding: 1px !important;
+}
+
+.loading {
+  text-align: center;
+  font-size: 25px;
+  color: #333;
+}
+
+.button-style {
+  box-shadow: none;
+  padding: 10px;
+  border: none;
+  background-color: #f27420;
+  color: white;
+  border-radius: 50px;
+}
+.button-style:focus {
+  outline: none;
+}
+.button-style:hover {
+  background: #fa860a;
+  cursor: pointer;
+}
+
+.align {
+  text-align: center;
+}
+
+.head-font {
+  font-weight: 800 !important;
+}
+
+.head-font,
+.body-font {
+  color: #333;
+  font-family: Montserrat, sans-serif;
+}
+
+.body-font {
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
+.link-map {
+  color: #3A85D4 !important;
+}
+.link-map:hover {
+  text-decoration: underline !important;
+  color: #0D82FF !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .information {
+    position: static;
+    transform: translateY(0);
+  }
+
+  .head-font {
+    font-size: 18px;
+  }
+
+  .body-font {
+    font-size: 13px;
+  }
+
+  .location {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 478px) {
+  .head-font {
+    font-size: 15px;
+  }
+
+  .body-font {
+    font-size: 11px;
+  }
+
+  .location {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .button-style {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,70 @@
+.fixed-properties {
+  height: 200px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.header-block {
+  margin: 20px;
+}
+
+.founders-text {
+  background-color: #f8a242;
+  height: auto;
+  color: white;
+}
+
+.card {
+  background-color: #f8a242;
+  border-color: lightgray;
+}
+
+.founders-head {
+  background-color: white;
+}
+
+.card-deck-wrapper {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.page-header {
+  margin-top: 70px;
+  color: #f27121;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1091px) {
+  .fixed-properties {
+    height: 160px;
+    width: 160px;
+  }
+}
+@media only screen and (max-width: 845px) {
+  .card-title {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 792px) {
+  .richard-text {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .card {
+    display: block !important;
+    margin-bottom: 10px;
+  }
+
+  .fixed-properties {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .fixed-properties {
+    height: 190px;
+    width: 190px;
+  }
+}

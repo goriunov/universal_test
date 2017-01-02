@@ -1,0 +1,344 @@
+.shadow-overlay {
+  max-height: 100vh;
+  min-height: 100vh;
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+  background: url(./assets/images/background/EarthMap.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transition: all 1s;
+  width: auto;
+  height: auto;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  z-index: -100;
+  background: url(./assets/images/background/EarthMap.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+div {
+  font-family: Montserrat, sans-serif;
+}
+
+.logo img {
+  max-width: 80%;
+  height: auto;
+  margin-left: -2%;
+}
+
+.parent {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 35%;
+  height: 100px;
+  margin-top: -55px;
+  /* account for padding and border if not using box-sizing: border-box; */
+}
+
+.slogan {
+  margin-top: 20px;
+  color: white;
+}
+
+.button-margin-top {
+  margin-top: 30px;
+}
+
+.buttons {
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  color: white;
+  padding: 15px 0;
+  background: rgba(255, 102, 0, 0.7);
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Montserrat,Arial,Helvetica,sans-serif;
+}
+.buttons:focus {
+  outline: none;
+}
+.buttons:hover {
+  background: #ff6600;
+  cursor: pointer;
+}
+
+.special {
+  text-align: right;
+}
+
+.middleImage {
+  text-align: center;
+}
+
+.partnerImages {
+  padding: 0px;
+  width: 145px;
+}
+
+.longPartnerImages {
+  padding: 15px;
+  width: 250px;
+}
+
+.partners {
+  padding: 20px;
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.separator {
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.body-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.specAlign {
+  text-align: right;
+}
+
+.col-sm-push-6 {
+  left: 50%;
+}
+
+.col-sm-pull-6 {
+  right: 50%;
+}
+
+.margin-row {
+  margin-top: 3%;
+}
+
+.image-size {
+  width: 80%;
+}
+
+.wheel-img {
+  margin-left: 50px;
+  margin-right: 0;
+}
+
+.iphone-img {
+  width: 100%;
+}
+
+.badge-resize {
+  width: 100px;
+}
+
+.orange-header {
+  color: rgba(255, 126, 41, 0.9);
+}
+
+.left-header, .left-text {
+  text-align: right;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #777;
+}
+
+.about {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3.5%;
+}
+
+.text-padding {
+  padding-top: 10%;
+}
+
+.container {
+  padding-top: 50px;
+  padding-left: 12%;
+  padding-right: 15%;
+  padding-bottom: 15%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+.col-md-offset-2 {
+  margin-left: 10%;
+  padding-top: 5%;
+}
+
+.to-hide {
+  width: 300px;
+  font-size: 1.75rem;
+}
+
+.remove-padding {
+  padding-top: 20%;
+}
+.remove-padding div {
+  padding: 0;
+}
+
+#download {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.download-text {
+  padding-top: 5%;
+}
+
+.try-uv {
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+.try-uv h3 {
+  color: #663;
+}
+
+.separator-in {
+  border-bottom: 1px solid lightgray;
+}
+
+.margin-top {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .wheel-img {
+    margin-left: 0;
+  }
+
+  .buttons {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .logo {
+    text-align: center;
+    top: 30%;
+  }
+
+  .mediaResize {
+    text-align: center;
+  }
+
+  .partnerImages {
+    width: 200px;
+  }
+
+  .longPartnerImages {
+    width: 350px;
+  }
+
+  .partners {
+    padding: 10px;
+  }
+
+  .about {
+    text-align: center;
+  }
+
+  .col-sm-6 {
+    width: 100%;
+  }
+
+  .col-sm-push-6 {
+    left: 0%;
+  }
+
+  .col-sm-pull-6 {
+    right: 0%;
+  }
+
+  .left-header, .left-text {
+    text-align: center;
+  }
+
+  .img-left {
+    text-align: center;
+  }
+
+  .col-xs-offset-3 {
+    margin-left: 25%;
+  }
+
+  .col-xs-6 {
+    width: 50%;
+  }
+
+  .iphone-img {
+    width: 70%;
+  }
+
+  .to-hide {
+    display: none;
+  }
+
+  .center-align {
+    text-align: center;
+  }
+
+  .col-md-offset-2 {
+    margin-left: 0%;
+  }
+
+  .badge-resize {
+    width: 150px;
+  }
+
+  .remove-padding {
+    padding-top: 5%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .longPartnerImages {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 997px) {
+  .badge-resize {
+    width: 120px;
+  }
+}
+@media screen and (min-width: 1360px) {
+  .badge-resize {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .shadow-overlay {
+    max-height: 100vh;
+    min-height: 100vh;
+    background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  video#bgvid {
+    display: none;
+  }
+}

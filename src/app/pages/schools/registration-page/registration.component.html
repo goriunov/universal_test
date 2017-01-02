@@ -1,0 +1,88 @@
+
+<div class="back-image">
+  <div class="container content-container">
+    <p class="header-font">
+      Congratulations!
+    </p>
+    <p class="sub-header-font">
+      You are almost there with the installation! Fill in your details below to activate it on the UVLens network.
+    </p>
+  </div>
+</div>
+<div class="container form-container content-container">
+
+  <p class="text-style" >Fill in the details of your weather station below to provide live UV data to the staff and students of the school!</p>
+  <form class="form-horizontal center-form" (ngSubmit)="onSubmit()" [formGroup]="myForm" novalidate>
+    <div class="form-group row">
+      <label class="col-xs-10 offset-xs-1 control-label label-style" >Name *</label>
+      <div class="col-xs-10 offset-xs-1">
+        <input type="text" class="form-control"  formControlName= "name" placeholder="Name" required >
+
+      </div>
+      <small class="col-xs-10 offset-xs-1 text-danger" *ngIf="myForm.get('name').hasError('required') && myForm.get('name').touched" >Name is required</small>
+
+      <!-- Problem entering wrong text? -->
+
+    </div>
+    <!-- end of form group -->
+    <div class="form-group row">
+      <label class="col-xs-10 offset-xs-1 control-label label-style">Email *</label>
+      <div class="col-xs-10 offset-xs-1">
+        <input type="email" class="form-control" formControlName= "email" placeholder="Email" required>
+      </div>
+      <small class="col-xs-10 offset-xs-1 text-danger" *ngIf="myForm.get('email').hasError('required') && myForm.get('email').touched" >Email is required </small>
+      <small class="col-xs-10 offset-xs-1 text-danger" *ngIf="myForm.get('email').hasError('pattern') && myForm.get('name').touched" >Valid Email is required</small>
+      <!-- end of row-->
+    </div>
+
+    <div class="form-group row">
+      <label class="col-xs-10 offset-xs-1 control-label label-style" >Phone number</label>
+      <div class="col-xs-10 offset-xs-1">
+        <input type="tel" class="form-control" formControlName= "phone" placeholder="Phone number" >
+      </div>
+      <small class="col-xs-10 offset-xs-1 text-danger" > </small>
+
+      <!-- end of row-->
+    </div>
+
+    <div class="form-group row">
+      <label class="col-xs-10 offset-xs-1 control-label label-style" >School *</label>
+      <div class="col-xs-10 offset-xs-1">
+        <input type="text" class="form-control" formControlName= "school" placeholder="School" >
+      </div>
+      <small class="col-xs-10 offset-xs-1  text-danger" *ngIf="myForm.get('school').hasError('required') && myForm.get('school').touched "> School is required</small>
+
+      <!-- end of row-->
+    </div>
+    <div class="form-group row">
+      <label class="col-xs-10 offset-xs-1 control-label label-style" >Sensor ID (e.g. IAUCKLAN416) *</label>
+      <div class="col-xs-10 offset-xs-1">
+        <input type="text" class="form-control" formControlName= "sensor" placeholder="Sensor" required>
+      </div>
+      <small class="col-xs-10 offset-xs-1 text-danger" *ngIf="myForm.get('sensor').hasError('required') && myForm.get('sensor').touched">Sensor is required </small>
+
+      <!-- end of row-->
+    </div>
+
+    <!-- end of form group -->
+    <div class="row">
+
+      <div class="col-xs-10 offset-xs-1 col-sm-5 push-sm-6 ">
+        <span class="help-block custom-help"> * This field is required. </span>
+      </div>
+
+      <div class="col-xs-10 offset-xs-1 col-sm-5 pull-sm-6" >
+
+        <button type="submit" class="btn btn-default btn-custom" [disabled]="myForm.invalid"> SUBMIT </button>
+
+      </div>
+
+    </div>
+  </form>
+  <br>
+  <div class="" >
+    <div id="successStation" >
+    </div>
+  </div>
+</div>
+
