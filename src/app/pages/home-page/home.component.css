@@ -13,6 +13,22 @@
   background-size: cover;
 }
 
+.back-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  /*max-height: 100vh;*/
+  /*min-height: 100vh;*/
+  z-index: -1000;
+  background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .forMobile{
   height: 800px;
 }
@@ -245,7 +261,6 @@ div {
 
   .logo {
     text-align: center;
-    top: 30%;
   }
 
   .mediaResize {
@@ -342,18 +357,7 @@ div {
   }
 }
 @media screen and (max-width: 800px) {
-  .back-image {
-    /*max-height: 100vh;*/
-    /*min-height: 100vh;*/
-    z-index: 1;
-    background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  .back-image{
+    height: 800px;
   }
-
-  /*video#bgvid {*/
-    /*display: none;*/
-  /*}*/
 }

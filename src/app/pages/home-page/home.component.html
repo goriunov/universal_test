@@ -1,4 +1,5 @@
-<div class="back-image" [ngClass] = "isVideo ? 'vh_height100' : 'forMobile'">
+<div [ngClass] = "isVideo ? 'vh_height100' : 'forMobile'">
+  <div class="back-image"></div>
   <div class="shadow-overlay vh_height100"></div>
   <video *ngIf="isVideo"  playsinline autoplay muted loop poster="./assets/images/background/EarthMap.jpg" id="bgvid">
     <source src="./assets/images/background/Earth_1.mp4" type="video/mp4">
