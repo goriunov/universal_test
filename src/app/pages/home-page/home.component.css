@@ -14,7 +14,10 @@
 }
 
 .forMobile{
-  bottom:0;
+  height: 800px;
+}
+.forMobile .shadow-overlay{
+  height: 800px;
 }
 
 video{
@@ -342,6 +345,7 @@ div {
   .back-image {
     /*max-height: 100vh;*/
     /*min-height: 100vh;*/
+    z-index: 1;
     background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
