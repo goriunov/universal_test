@@ -13,6 +13,9 @@
   background-size: cover;
 }
 
+video{
+  z-index: -1000;
+}
 video#bgvid {
   position: fixed;
   top: 50%;
@@ -25,7 +28,7 @@ video#bgvid {
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
-  z-index: -100;
+  z-index: -1000;
   background: url(./assets/images/background/EarthMap.jpg) no-repeat center center;
   background-size: cover;
   overflow: hidden;
