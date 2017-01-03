@@ -1,7 +1,7 @@
 .shadow-overlay {
   /*max-height: 100vh;*/
   /*min-height: 100vh;*/
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   top:0;
@@ -11,6 +11,10 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.forMobile{
+  bottom:0;
 }
 
 video{
@@ -338,7 +342,7 @@ div {
   .back-image {
     /*max-height: 100vh;*/
     /*min-height: 100vh;*/
-    /*background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;*/
+    background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
