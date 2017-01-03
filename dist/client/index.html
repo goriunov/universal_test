@@ -120,8 +120,27 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link href="assets/styles/font-awesome/font-awesome.min.css" rel="stylesheet">
-  <!--<script src="http://maps.googleapis.com/maps/api/js"></script>-->
+  <script type="text/javascript" src="assets/script/vh_vw.js"></script>
   <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
+
+
+  <script>
+    new vUnit({
+      CSSMap: {
+        // The selector (VUnit will create rules ranging from .selector1 to .selector100)
+        '.vh_height': {
+          // The CSS property (any CSS property that accepts px as units)
+          property: 'height',
+          // What to base the value on (vh, vw, vmin or vmax)
+          reference: 'vh'
+        }
+      },
+      onResize: function() {
+        console.log('A screen resize just happened, yo.');
+      }
+    }).init();
+  </script>
+
 <link href="styles.58e065928ed8ebd0b582.bundle.css" rel="stylesheet"></head>
 
 <body>
@@ -132,9 +151,8 @@
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-56062321-4', 'none');
-
 </script>
 <app-root>Loading...</app-root>
-<script type="text/javascript" src="inline.d41d8cd98f00b204e980.bundle.js"></script><script type="text/javascript" src="scripts.b78acfef1b2b658799a4.bundle.js"></script><script type="text/javascript" src="vendor.2533380d39b061b51e60.bundle.js"></script><script type="text/javascript" src="client.9468d0cb3db6bdf68865.bundle.js"></script></body>
+<script type="text/javascript" src="inline.d41d8cd98f00b204e980.bundle.js"></script><script type="text/javascript" src="scripts.b78acfef1b2b658799a4.bundle.js"></script><script type="text/javascript" src="vendor.2533380d39b061b51e60.bundle.js"></script><script type="text/javascript" src="client.591a30d10a50997b1550.bundle.js"></script></body>
 
 </html>

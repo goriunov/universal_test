@@ -1,8 +1,12 @@
 .shadow-overlay {
-  max-height: 100vh;
-  min-height: 100vh;
-  /*background-color: rgba(0, 0, 0, 0.3);*/
-  background: url(./assets/images/background/EarthMap.jpg) no-repeat center center;
+  /*max-height: 100vh;*/
+  /*min-height: 100vh;*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  background-color: rgba(0, 0, 0, 0.3);
+  /*background: url(./assets/images/background/EarthMap.jpg) no-repeat center center;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -328,17 +332,17 @@ div {
   }
 }
 @media screen and (max-width: 800px) {
-  .shadow-overlay {
-    max-height: 100vh;
-    min-height: 100vh;
-    background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;
+  .back-image {
+    /*max-height: 100vh;*/
+    /*min-height: 100vh;*/
+    /*background: url("./assets/images/background/mobileBack.jpg") no-repeat center center;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
 
-  video#bgvid {
-    display: none;
-  }
+  /*video#bgvid {*/
+    /*display: none;*/
+  /*}*/
 }
