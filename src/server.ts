@@ -12,6 +12,8 @@ import { AppModule } from './app/app.node.module';
 import { environment } from './environments/environment';
 import { routes } from './server.routes';
 
+
+
 // App
 
 const app  = express();
@@ -24,14 +26,6 @@ const port = process.env.PORT || 4200;
 if (environment.production) {
   enableProdMode();
 }
-
-/**
- * Express View
- */
-app.engine('.html', createEngine({}));
-app.set('views', path.join(ROOT, 'client'));
-app.set('view engine', 'html');
-
 /**
  * Enable compression
  */
@@ -41,6 +35,16 @@ app.use(compression());
  * serve static files
  */
 app.use('/', express.static(path.join(ROOT, 'client'), {index: false}));
+
+
+
+
+/**
+ * Express View
+ */
+app.engine('.html', createEngine({}));
+app.set('views', path.join(ROOT, 'client'));
+app.set('view engine', 'html');
 
 /**
  * place your api routes here
@@ -68,6 +72,7 @@ function ngApp(req: any, res: any) {
  * use universal for specific routes
  */
 app.get('/', ngApp);
+
 routes.forEach(route => {
   app.get(`/${route}`, ngApp);
   app.get(`/${route}/*`, ngApp);
