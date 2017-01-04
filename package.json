@@ -4,7 +4,7 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "pm2 stop all && pm2 start ./dist/server/server.bundle.js -i max",
+    "start": "node ./dist/server/server.bundle.js",
     "stop": "pm2 stop all",
     "log": "pm2 logs",
     "lint": "tslint \"src/**/*.ts\"",
