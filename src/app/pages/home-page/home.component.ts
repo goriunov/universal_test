@@ -12,13 +12,16 @@ declare var $:any;
 
 export class HomeComponent implements OnInit{
   isVideo:boolean = false;
+  isMobile: boolean = false;
 
   @HostListener('window:resize' , ['$event'])
   removeVideo(event){
     if(isBrowser) {
       if ($(window).width() <= 800) {
         this.isVideo = false;
+        this.isMobile = true;
       }else{
+        this.isMobile = false;
         this.isVideo = true;
       }
     }
@@ -28,6 +31,8 @@ export class HomeComponent implements OnInit{
     if(isBrowser) {
       if ($(window).width() >= 800) {
         this.isVideo = true;
+      }else{
+        this.isMobile = true;
       }
     }
   }

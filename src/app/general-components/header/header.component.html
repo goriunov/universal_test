@@ -8,7 +8,7 @@
         <a routerLinkActive="active" [routerLink]="['home']" class="orange-link">HOME</a>
       </div>
       <div class="col-sm-4 col-lg-3 col-xl-2  menu-item  menu-item-special dropdown">
-        <a class="orange-link">SCHOOLS</a>
+        <a  class="orange-link">SCHOOLS</a>
         <div class="dropdown-content">
           <a routerLinkActive="drop-active" [routerLink]="['schools/about']">ABOUT</a>
           <a routerLinkActive="drop-active" href="http://help.uvlens.com/article/6-weather-station-installation">INSTALLATION</a>
@@ -49,7 +49,7 @@
         <a (click)="onOpenMenu()" routerLinkActive="active" [routerLink]="['home']" class="orange-link">HOME</a>
       </div>
       <div class="col-sm-12 menu-item  menu-item-center">
-        <a  (click)="dropIsOpen = !dropIsOpen"  class="orange-link">SCHOOLS <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+        <a  (click)="dropIsOpen = !dropIsOpen"  class="orange-link" >SCHOOLS <i class="fa fa-caret-down" aria-hidden="true"></i></a>
         <div class="col-sm-12 drop-in-drop-group " [ngClass]="dropIsOpen ? '': 'dropdown-content'">
           <div class="col-sm-12 spacing">
             <a routerLinkActive="drop-in-drop-active"  (click)="onOpenMenu()" class="drop-in-drop " [routerLink]="['schools/about']">ABOUT</a>

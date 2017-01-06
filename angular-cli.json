@@ -1,7 +1,7 @@
 {
   "project": {
-    "version": "1.0.0-alpha.universal.2-2",
-    "name": "test-foo"
+    "version": "1.0.0-alpha.universal.3",
+    "name": "uv-web-app"
   },
   "apps": [
     {

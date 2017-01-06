@@ -1,10 +1,10 @@
-import { TestFooPage } from './app.po';
+import { UvWebAppPage } from './app.po';
 
-describe('test-foo App', function() {
-  let page: TestFooPage;
+describe('uv-web-app App', function() {
+  let page: UvWebAppPage;
 
   beforeEach(() => {
-    page = new TestFooPage();
+    page = new UvWebAppPage();
   });
 
   it('should display message saying app works', () => {
