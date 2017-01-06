@@ -4,23 +4,21 @@
   text-align: center;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .back-image {
-    /*max-height: 100vh;*/
-    /*min-height: 100vh;*/
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background: url("./assets/images/schools/bg-section.svg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-  }
+.back-image {
+  /*max-height: 100vh;*/
+  /*min-height: 100vh;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: url("./assets/images/schools/bg-section.svg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
 }
 
 .block-align-center {
