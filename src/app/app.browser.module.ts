@@ -58,7 +58,7 @@ import {router} from "./app.routing";
      * using routes
      */
     IdlePreloadModule.forRoot(),
-    RouterModule.forRoot([], { useHash: false , preloadingStrategy: IdlePreload }),
+    RouterModule.forRoot([], { useHash: false }),
     RouterModule.forChild(router),
 
     /** Loaded but will be used in browser check ts file for isBrowser statment !!!*/
