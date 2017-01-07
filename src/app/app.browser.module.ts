@@ -12,16 +12,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './index';
 import {HeaderComponent} from "./general-components/header/header.component";
 import {FooterComponent} from "./general-components/footer/footer.component";
-import {Routes, RouterModule} from "@angular/router";
+import {RouterModule} from "@angular/router";
 import {HomeComponent} from "./pages/home-page/home.component";
-import {AboutComponent} from "./pages/about-page/about.component";
-import {DevelopersComponent} from "./pages/about-page/developers/developers.component";
-import {FoundersComponent} from "./pages/about-page/founders/founders.component";
-import {DescriptionComponent} from "./pages/about-page/description/description.component";
-import {SchoolsAboutComponent} from "./pages/schools/about-page/about.component";
-import {RegistrationComponent} from "./pages/schools/registration-page/registration.component";
 import {EmailService} from "./shared/email.service";
-import {ContactComponent} from "./pages/contact-page/contact.component";
 import {WidgetComponent} from "./widget/widget.component";
 import {MapComponent} from "./widget/map/map.component";
 import {WheelComponent} from "./widget/wheel/wheel.component";
@@ -30,24 +23,8 @@ import {WidgetConnectionService} from "./widget/shared/widgetConection.service";
 import { AgmCoreModule } from "angular2-google-maps/core";
 import {Angulartics2Module, Angulartics2GoogleAnalytics} from "angulartics2";
 import {Ng2PageScrollModule} from "ng2-page-scroll";
-
-// import { RouterModule } from '@angular/router';
-// import { appRoutes } from './app/app.routing';
-
-
-const router: Routes = [
-  {path: '' , redirectTo: 'home' , pathMatch: 'full'},
-  {path: 'home' , component: HomeComponent},
-  {path: 'about' , component: AboutComponent},
-  {path: 'schools' ,redirectTo: 'schools/about' , pathMatch:'full'},
-  {path: 'schools' ,
-    children: [
-      {path: 'about' , component:SchoolsAboutComponent},
-      {path: 'registration', component:RegistrationComponent}
-    ]},
-  // {path: 'widget', component: WidgetComponent},
-  {path: 'contact', component: ContactComponent}
-];
+import {IdlePreload, IdlePreloadModule} from "@angularclass/idle-preload";
+import {router} from "./app.routing";
 
 
 
@@ -63,13 +40,6 @@ const router: Routes = [
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AboutComponent,
-    DevelopersComponent,
-    FoundersComponent,
-    DescriptionComponent,
-    RegistrationComponent,
-    SchoolsAboutComponent,
-    ContactComponent,
 
     /** Loaded but will be used in browser check ts file for isBrowser statment !!!*/
     WidgetComponent,
@@ -87,7 +57,9 @@ const router: Routes = [
     /**
      * using routes
      */
-    RouterModule.forRoot(router),
+    IdlePreloadModule.forRoot(),
+    RouterModule.forRoot([], { useHash: false , preloadingStrategy: IdlePreload }),
+    RouterModule.forChild(router),
 
     /** Loaded but will be used in browser check ts file for isBrowser statment !!!*/
     Ng2PageScrollModule.forRoot(),
@@ -95,7 +67,8 @@ const router: Routes = [
       apiKey: "AIzaSyCMysJ3MutKKAWC__74K9tzI0aVckVyoE0",
       libraries: ["places"]
     }),
-    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
+    Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ]),
+
   ],
   providers: [
     { provide: 'isBrowser', useValue: isBrowser },
