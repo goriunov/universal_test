@@ -2,7 +2,7 @@
   "name": "UV-WEB-APP",
   "version": "0.0.1",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "node index.js",
     "replaceStart": "pm2 stop all && pm2 start server/index.js-i max"
   },
   "license": "MIT",
