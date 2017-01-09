@@ -445,6 +445,8 @@ var interval;
           // change coordinate
           var x = jcsCenter.x + ((jcsCenter.r*settings.handleDist)/100) * Math.cos(rad) - jcsBallRadius;
           var y = jcsCenter.y + ((jcsCenter.r*settings.handleDist)/100) * Math.sin(rad) - jcsBallRadius;
+          console.log(x);
+          console.log(y);
           if(deg < 0){
               dragSliderDeg = 360 + deg;
           }else{
