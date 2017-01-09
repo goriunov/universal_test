@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "node server/index.js",
-    "replaceStart": "pm2 stop all && pm2 start ./dist/server/server.bundle.js -i max"
+    "replaceStart": "pm2 stop all && pm2 start server/index.js-i max"
   },
   "license": "MIT",
   "dependencies": {
